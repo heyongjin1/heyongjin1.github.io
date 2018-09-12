@@ -173,6 +173,42 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2018/09/12/接入规范/">接入规范</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-09-12T08:49:09.000Z" itemprop="datePublished">
+          2018-09-12
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        ## 
+一、调用链接入规范基础镜像要求ZCM平台默认植入iTracing Agent 实现调用链自动上报, 对应用发布者透明。自动上报的前提是基础镜像规范化，应用发布者需要使用ZCM提供的2个基础镜像来构建应用，如下：
+
+10.45.80.1/public/centos7-java-base:openjdk1.8.0.151
+10.45.80.1/public/centos7_java8_tomcat8_base:8.0.35
+
+对于j
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/09/12/接入规范/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2018/09/10/下载专区/">下载专区</a></h3>
                     <span>
                         <span class="post-meta">
@@ -336,7 +372,30 @@
                 <div class="col-md-8">
                     <p>
                       
-                        
+                        iTracing的collector收集数据并存入hbase，所以iTracing集群部署其实也就是hbase集群的部署
+一、Hbase集群部署部署前准备工作主机规划
+
+
+主机地址
+HostName
+Zookeeper
+HDFS
+HBase
+
+
+
+
+10．45.61.61
+hbase1
+server
+NameNode
+Master
+
+
+10．45.61.62
+hbase2
+server
+DataNode，SecondaryNameNod
                       
                     </p>
                     
@@ -366,7 +425,11 @@
                 <div class="col-md-8">
                     <p>
                       
-                        
+                        为了体验一下iTracing强大的功能，让我们在Linux系统上搭建个单机版的来体验一下吧！
+下载安装对于单机版搭建，为了进一步降低大家负担，我们提供了一键安装包，下载地址为：
+链接：https://pan.baidu.com/s/1AYzqdRsjBY7QbwXjtWkCxw 密码：371i
+下载完后，可以得到一个压缩包（standalone.tar.gz），将压缩包解压到/root路径下，得到standalone文件夹，具体内容：
+
                       
                     </p>
                     

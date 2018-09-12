@@ -150,7 +150,33 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<p>为了体验一下iTracing强大的功能，让我们在Linux系统上搭建个单机版的来体验一下吧！</p>
+<h1 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h1><p>对于单机版搭建，为了进一步降低大家负担，我们提供了一键安装包，下载地址为：</p>
+<p>链接：<a href="https://pan.baidu.com/s/1AYzqdRsjBY7QbwXjtWkCxw" target="_blank" rel="noopener">https://pan.baidu.com/s/1AYzqdRsjBY7QbwXjtWkCxw</a> 密码：371i</p>
+<p>下载完后，可以得到一个压缩包（standalone.tar.gz），将压缩包解压到/root路径下，得到standalone文件夹，具体内容：</p>
+<p><img src="/images/kuaisukaishi01.png" alt=""></p>
+<p>这样就算下载安装完了，是不是很简单！</p>
+<h1 id="启动iTracing"><a href="#启动iTracing" class="headerlink" title="启动iTracing"></a>启动iTracing</h1><p>下载安装完，就剩下启动了，启动也十分简单：</p>
+<ul>
+<li><p>进入一键安装包 <code>cd /root/standalone\</code>(也就是你解压缩的位置）；</p>
+</li>
+<li><p>使用一键安装：<code>sh start.sh /root/standalone</code></p>
+</li>
+</ul>
+<h1 id=""><a href="#" class="headerlink" title=""></a><img src="/images/kuaisukaishi2.png" alt=""></h1><h1 id="验证是否部署成功"><a href="#验证是否部署成功" class="headerlink" title="验证是否部署成功"></a>验证是否部署成功</h1><p>在一键安装包里面包含了一个<code>demo-app</code>，这个就是用来验证是否部署成功，那我们现在来启动这个demo：</p>
+<ul>
+<li>进入demo-app：<code>cd /root/standalone/demo-app</code></li>
+<li>启动demo-app：<code>sh start\_demo\_app.sh /root/standalone</code></li>
+</ul>
+<p>启动成功后，我们在浏览器输入ip:<code>8300</code>即可打开demo界面（这里我部署的主机ip为10.45.80.26，就输入10.45.80.26:8300)</p>
+<p><img src="/images/kuaisukaishi04.png" alt=""></p>
+<p>接下来就到了激动人心的时刻，在浏览器输入ip:<code>28080</code>，打开<code>iTracing web</code>界面（这里我部署的主机ip为10.45.80.26，输入10.45.80.26:28080)</p>
+<p><img src="/images/kuaisukaishi07.png" alt="">到这也就完全成功了。</p>
+<h1 id="安装常见问题"><a href="#安装常见问题" class="headerlink" title="安装常见问题"></a>安装常见问题</h1><p><strong>问题1：在启动一键安装时，报错没有·JAVA_HOME</strong></p>
+<p>解决方案：使用<code>java -version</code>查看有无Java，若有则查找java安装位置，一般在<code>/usr/lib/jvm</code>下；若没有java，则需自己去下载并配置（这里jdk最好是1.7+版本的）</p>
+<p><strong>问题2：在一键安装启动时，sh文件执行权限不被允许</strong></p>
+<p>解决方案：使用命令：<code>chmod +x ./**/*.sh</code>可以给所有sh文件执行权限</p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
